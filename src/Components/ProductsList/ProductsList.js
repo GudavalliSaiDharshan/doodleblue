@@ -162,9 +162,14 @@ const ProductsList = (props) => {
                     class="card col-sm-3 col-md-3 col-lg-3"
                     style={{ width: "100%", margin: 10 }}
                   >
-                    <a onClick={() => setOpen(true)}>
+                    <a onClick={() => editHandler(d, index)}>
                       <img
-                        src={require(`../../assets/${d.img_url}`)}
+                        // src={require(`../../assets/${d.img_url}`)}
+                        src={
+                          d.blob
+                            ? d.img_url
+                            : require(`../../assets/${d.img_url}`)
+                        }
                         class="card-img-top img-fluid"
                         style={{ width: "100%", height: "16rem" }}
                       />

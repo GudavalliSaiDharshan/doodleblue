@@ -96,12 +96,14 @@ const AddProducts = (props) => {
   };
 
   const editHandler = () => {
+    var url = URL.createObjectURL(selectedFile);
+    console.log(url, "s");
     var newList = {
       category: category,
-      img_url: selectedFile,
+      img_url: url,
       rate: price,
       productName: productTitle,
-      // blob: true,
+      blob: true,
       top_Products: checked,
     };
     dataList[index] = newList;
