@@ -23,8 +23,8 @@ const ProductsList = (props) => {
   useEffect(() => {
     // alert(dataList);
     setData(dataList);
-    // setPage(1);
-    // setCurrentPageData(data.slice(0, 9));
+    setPage(1);
+    setCurrentPageData(dataList.slice(0, 9));
   }, [dataList]);
 
   console.log("sorted", dataList);

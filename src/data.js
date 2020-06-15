@@ -6,6 +6,7 @@ export const dataList = [
     saleRate: "10",
     productName: "Adidas1",
     top_Products: true,
+    blob: false,
   },
   {
     category: "shoes",
@@ -14,6 +15,7 @@ export const dataList = [
     saleRate: "12",
     productName: "Adidas2",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -21,6 +23,7 @@ export const dataList = [
     rate: "18.05",
     productName: "Adidas3",
     top_Products: false,
+    blob: false,
   },
   {
     category: "t-shirts",
@@ -29,6 +32,7 @@ export const dataList = [
     saleRate: "22",
     productName: "Billion",
     top_Products: false,
+    blob: false,
   },
   {
     category: "t-shirts",
@@ -37,6 +41,7 @@ export const dataList = [
     saleRate: "5",
     productName: "Metronaut",
     top_Products: false,
+    blob: false,
   },
   {
     category: "t-shirts",
@@ -45,6 +50,7 @@ export const dataList = [
     saleRate: "12",
     productName: "Morten",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -52,6 +58,7 @@ export const dataList = [
     rate: "23.05",
     productName: "Nike1",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -60,6 +67,7 @@ export const dataList = [
     saleRate: "10",
     productName: "Nike2",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -68,6 +76,7 @@ export const dataList = [
     saleRate: "10",
     productName: "Nike3",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -76,6 +85,7 @@ export const dataList = [
     saleRate: "10",
     productName: "Nike4",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -84,6 +94,7 @@ export const dataList = [
     saleRate: "10",
     productName: "Nike5",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -92,6 +103,7 @@ export const dataList = [
     saleRate: "15",
     productName: "Puma1",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -99,6 +111,7 @@ export const dataList = [
     rate: "30.05",
     productName: "Puma2",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -106,6 +119,7 @@ export const dataList = [
     rate: "30.05",
     productName: "Puma3",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -113,6 +127,7 @@ export const dataList = [
     rate: "30.05",
     productName: "Puma4",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -120,6 +135,7 @@ export const dataList = [
     rate: "30.05",
     productName: "Puma5",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -127,6 +143,7 @@ export const dataList = [
     rate: "30.05",
     productName: "Reebok1",
     top_Products: false,
+    blob: false,
   },
   {
     category: "shoes",
@@ -134,6 +151,7 @@ export const dataList = [
     rate: "30.05",
     productName: "Reebok2",
     top_Products: false,
+    blob: false,
   },
   {
     category: "t-shirts",
@@ -142,6 +160,7 @@ export const dataList = [
     saleRate: "17",
     productName: "Tripr",
     top_Products: true,
+    blob: false,
   },
   {
     category: "t-shirts",
@@ -150,6 +169,7 @@ export const dataList = [
     saleRate: "10",
     productName: "Veirdo",
     top_Products: false,
+    blob: false,
   },
   {
     category: "t-shirts",
@@ -158,5 +178,6 @@ export const dataList = [
     saleRate: "10",
     productName: "Weardo",
     top_Products: true,
+    blob: false,
   },
 ];

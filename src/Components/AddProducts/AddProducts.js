@@ -20,7 +20,6 @@ import { green } from "@material-ui/core/colors";
 import "../AddProducts/AddProducts.css";
 import CancelIcon from "@material-ui/icons/Cancel";
 import { dataList } from "../../data";
-import { Redirect } from "react-router-dom";
 
 const GreenCheckbox = withStyles({
   root: {
@@ -39,22 +38,26 @@ const AddProducts = (props) => {
   const [productTitle, setProductTitle] = useState("");
   const [price, setPrice] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
+  const [blob, setBlob] = useState();
 
-  const { handleClose, editable, list, index } = props;
+  const { handleClose, dataArr, editable, list, index } = props;
 
   // console.log(list, "list");
 
   useEffect(() => {
     if (list) {
+      console.log(list);
       setCategory(list.category);
       setProductTitle(list.productName);
       setPrice(list.rate);
       setChecked(list.top_Products);
       setSelectedFile(list.img_url);
+      setBlob(list.blob);
     }
   }, [dataList]);
 
-  console.log(selectedFile);
+  console.log(blob);
+  console.log(typeof selectedFile);
   const handleChange = (e) => {
     e.preventDefault();
     setCategory(e.target.value);
@@ -88,6 +91,7 @@ const AddProducts = (props) => {
         top_Products: checked,
       };
 
+      dataArr.push(newList);
       dataList.push(newList);
       handleClose();
     } else {
@@ -98,16 +102,25 @@ const AddProducts = (props) => {
   const editHandler = () => {
     var url = URL.createObjectURL(selectedFile);
     console.log(url, "s");
-    var newList = {
-      category: category,
-      img_url: url,
-      rate: price,
-      productName: productTitle,
-      blob: true,
-      top_Products: checked,
-    };
-    dataList[index] = newList;
-    handleClose();
+    if (
+      category &&
+      productTitle &&
+      price &&
+      selectedFile &&
+      checked !== ("" || null)
+    ) {
+      var newList = {
+        category: category,
+        img_url: url,
+        rate: price,
+        productName: productTitle,
+        blob: true,
+        top_Products: checked,
+      };
+      console.log(newList);
+      dataArr[index] = newList;
+      handleClose();
+    }
     // window.location.reload();
   };
 

@@ -35,11 +35,11 @@ const Main = () => {
   useEffect(() => {
     if (sorting === "price High to low") {
       console.log(sorting);
-      setData(dataList.sort((a, b) => b.rate - a.rate));
+      setData([...data.sort((a, b) => b.rate - a.rate)]);
     } else if (sorting === "price Low to High") {
-      setData(dataList.sort((a, b) => a.rate - b.rate));
+      setData([...data.sort((a, b) => a.rate - b.rate)]);
     } else {
-      setData(dataList);
+      setData([...dataList]);
     }
   }, [sorting]);
   console.log(data, "sorting");
@@ -97,7 +97,7 @@ const Main = () => {
             background: "none",
           }}
         >
-          <AddProducts handleClose={handleClose} />
+          <AddProducts handleClose={handleClose} dataArr={data} />
         </Modal>
       </div>
       <div
