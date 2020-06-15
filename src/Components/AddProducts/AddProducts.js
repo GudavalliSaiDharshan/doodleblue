@@ -56,8 +56,6 @@ const AddProducts = (props) => {
     }
   }, [dataList]);
 
-  console.log(blob);
-  console.log(typeof selectedFile);
   const handleChange = (e) => {
     e.preventDefault();
     setCategory(e.target.value);
@@ -100,8 +98,9 @@ const AddProducts = (props) => {
   };
 
   const editHandler = () => {
-    var url = URL.createObjectURL(selectedFile);
-    console.log(url, "s");
+    // var url = URL.createObjectURL(selectedFile);
+    // console.log(url, "s");
+      // console.log(dataList[index], "list");
     if (
       category &&
       productTitle &&
@@ -111,18 +110,20 @@ const AddProducts = (props) => {
     ) {
       var newList = {
         category: category,
-        img_url: url,
+        img_url: selectedFile,
         rate: price,
         productName: productTitle,
-        blob: true,
+        blob: blob,
         top_Products: checked,
       };
-      console.log(newList);
-      dataArr[index] = newList;
+      // console.log(newList);
+      dataList[index] =  newList;
       handleClose();
     }
     // window.location.reload();
   };
+
+  console.log(category)
 
   return (
     <Card style={{ width: "20%", padding: "2%" }}>
